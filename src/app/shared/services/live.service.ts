@@ -10,7 +10,7 @@ import { ResponsePageable } from '../model/responsePageable.model';
 })
 export class LiveService {
 
-  url = environment.baseUrl;
+  url = 'https://backend-live-spring.herokuapp.com/';
 
   httpOptions = {
     headers: new HttpHeaders({

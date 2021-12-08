@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: 'https://lives-spring.herokuapp.com/'
+  baseUrl: 'https://backend-live-spring.herokuapp.com/'
 };
