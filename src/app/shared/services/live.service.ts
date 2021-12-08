@@ -21,7 +21,7 @@ export class LiveService {
   constructor(private  httpClient: HttpClient) { }
 
   public getAllLives():Observable<Live[]>{
-    return this.httpClient.get<Live[]>(this.url)
+return this.httpClient.get<Live[]>(`${this.url}/lives`)
   }
 
   public getLivesWithFlag(flag: string):Observable<ResponsePageable>{
