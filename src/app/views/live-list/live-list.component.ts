@@ -41,4 +41,10 @@ export class LiveListComponent implements OnInit {
     })
   }
 
+  deleteLives(id:number){
+    this.liveService.deletarLives(id).subscribe(()=>{
+      window.location.reload();
+    })
+  }
+
 }

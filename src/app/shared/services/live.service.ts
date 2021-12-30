@@ -31,4 +31,9 @@ return this.httpClient.get<Live[]>(this.url)
   public postLives(live:any):Observable<Live>{
     return this.httpClient.post<any>(this.url,live, this.httpOptions)
   } 
+
+  public deletarLives(id: number):Observable<Live>{
+    return this.httpClient.delete<Live>(`${this.url}/${id}`)
+  }
+
 }

@@ -1,11 +1,15 @@
 <body style="background: blueviolet;">
     
     <mat-toolbar style="font-size:1.5rem; height:80px;">
-        <span class="nameApp">Repositório de vídeos Astronomicos</span>
+        <span class="nameApp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+              </svg>
+            Repositório de vídeos Astronômicos</span>
         <span class="example-spacer"></span>
     
         <button mat-raised-button (click)="addLive()" >
-            <mat-icon>add</mat-icon>Live
+            <mat-icon>add</mat-icon>Adicionar vídeo
         </button>
     </mat-toolbar>
     <app-live-list></app-live-list>
