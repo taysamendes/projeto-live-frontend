@@ -35,7 +35,12 @@ export class LiveFormDialogComponent implements OnInit {
 
   salvar():void {
     this.rest.postLives(this.liveForm.value).subscribe(result =>{})
+    this.rest.postNotification(this.liveForm.value).subscribe(result => {
+      console.log(result)
+    })
     this.dialogRef.close()
     this.liveForm.reset()
+    window.location.reload();
   }
+
 }

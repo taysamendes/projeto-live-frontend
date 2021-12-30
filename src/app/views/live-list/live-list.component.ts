@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 import { Live } from 'src/app/shared/model/live.model';
 import { LiveService } from 'src/app/shared/services/live.service';
 
@@ -12,15 +13,23 @@ export class LiveListComponent implements OnInit {
  
   livesPrevious!: Live[]
   livesNext!: Live[]
+  live!: Live
 
   constructor(
     private liveService: LiveService,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private route: ActivatedRoute
+
     ) { }
 
   ngOnInit(): void {
+    const id =  this.route.snapshot.paramMap.get('id')
     this.getLives()
     this.livesNext.forEach(x => x.urlSafe)
+
+    this.liveService.readById('id').subscribe(live => {
+      this.live = live;
+    });
   }
   
   getLives(){
@@ -41,7 +50,13 @@ export class LiveListComponent implements OnInit {
     })
   }
 
-  deleteLives(id:number){
+  alterarLive(id:number){
+    this.liveService.atualizarLives(id).subscribe(()=>{
+
+    })
+  }
+
+  deleteLive(id:number){
     this.liveService.deletarLives(id).subscribe(()=>{
       window.location.reload();
     })
