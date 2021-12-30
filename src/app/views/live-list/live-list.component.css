@@ -1,9 +1,17 @@
 
 .container{ 
     padding-top: 3%;
+    position: static;
+
+}
+
+.card-title{
+    width: 100%;
 }
 
 .card{
+    width: 100%;
+    margin: 1px;
     font-size: 15px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -21,8 +29,4 @@
 
 .card-text {
     color: blanchedalmond;
-}
-
-h5{
-  color: #a124ca;
 }

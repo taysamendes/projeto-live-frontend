@@ -2,9 +2,7 @@
     <mat-tab label="Realizadas">
         <div class="container">
             <div class="card-group" style="justify-content: center;">
-                <div class="row">
                     <ng-container *ngFor="let live of livesPrevious">
-                        <div class="col-lg-4">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">{{live.liveName}} - {{live.liveDate | date:"dd/MM/yyyy"}}</h5>
@@ -16,22 +14,19 @@
                                 <div class="card-footer">
                                     <small class="text-muted">{{live.channelName}}</small>
                                 </div>
+                                <button type="button" class="btn btn-danger">Deletar</button>
+                                <button type="button" class="btn btn-info">Atualizar</button>
                             </div>
-                        </div>
-
 
                     </ng-container>
                 </div>
-            </div>
         </div>
     </mat-tab>
 
     <mat-tab label="Próximas">
         <div class="container">
             <div class="card-group" style="justify-content: center;">
-                <div class="row">
                     <ng-container *ngFor="let live of livesNext">
-                        <div class="col-4">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">{{live.liveName}} - {{live.liveDate | date:"dd/MM/yyyy"}}
@@ -47,12 +42,11 @@
                                 <div class="card-footer">
                                     <small class="text-muted">{{live.channelName}}</small>
                                 </div>
+                                <button type="button" class="btn btn-danger">Deletar</button>
+                                <button type="button" class="btn btn-info">Atualizar</button>
                             </div>
-                        </div>
-
-
-                    </ng-container>
-                </div>
+                           
+                        </ng-container>
             </div>
         </div>
     </mat-tab>

@@ -6,4 +6,10 @@
 
 .example-full-width {
     width: 100%;
+    font-size: large;
+}
+
+.example-form-field {
+    font-size: large;
+
 }

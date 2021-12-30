@@ -10,7 +10,7 @@ import { ResponsePageable } from '../model/responsePageable.model';
 })
 export class LiveService {
 
-  url = 'https://backend-live-spring.herokuapp.com/';
+  url = 'https://backend-live-spring.herokuapp.com/lives';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -21,7 +21,7 @@ export class LiveService {
   constructor(private  httpClient: HttpClient) { }
 
   public getAllLives():Observable<Live[]>{
-return this.httpClient.get<Live[]>(`${this.url}/lives`)
+return this.httpClient.get<Live[]>(this.url)
   }
 
   public getLivesWithFlag(flag: string):Observable<ResponsePageable>{
